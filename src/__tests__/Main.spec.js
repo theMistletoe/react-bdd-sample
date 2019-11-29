@@ -4,7 +4,7 @@ import "@testing-library/jest-dom/extend-expect";
 import axios from 'axios';
 import regeneratorRuntime from "regenerator-runtime";
 
-import Main from "../Main";
+import Main from "../components/Main";
 
 afterEach(cleanup);
 

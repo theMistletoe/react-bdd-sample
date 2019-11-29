@@ -4,8 +4,8 @@ import "@testing-library/jest-dom/extend-expect";
 import ReactDOM from "react-dom";
 import regeneratorRuntime from "regenerator-runtime";
 
-import App from "../App";
-import Main from "../Main";
+import App from "../components/App";
+import Main from "../components/Main";
 
 afterEach(cleanup);
 
