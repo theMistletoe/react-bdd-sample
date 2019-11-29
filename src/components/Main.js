@@ -5,7 +5,7 @@ export default class Main extends React.Component {
   
     constructor(props) {
         super(props);
-        this.state = { user: "" }
+        this.state = { user: "", url: "" }
     }
 
     componentDidMount() {
@@ -14,6 +14,7 @@ export default class Main extends React.Component {
             .then(function(response) {
                 console.log(response.data)
                 self.setState({user: response.data.login})
+                self.setState({url: response.data.html_url})
             })
             .catch(function(error) {
                 console.log(error)
@@ -24,7 +25,10 @@ export default class Main extends React.Component {
     return (
       <div>
         <h1>Main Page</h1>
-        <p data-testid="name">{this.state.user}</p>
+        <ul>
+          <li data-testid="name">{this.state.user}</li>
+          <li data-testid="url">{this.state.url}</li>
+        </ul>
       </div>
     );
   }

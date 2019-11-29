@@ -29,7 +29,7 @@ describe("Main", () => {
 
     describe("execute",  () => {
 
-        it("render Main component",async () => {
+        it("render user name",async () => {
             const resp = {
                 data: {login: 'theMistletoe'}
             };
@@ -41,6 +41,17 @@ describe("Main", () => {
             expect(axios.get).toHaveBeenCalledTimes(1)
 
             expect(getByText("theMistletoe")).toBeInTheDocument();
+        });
+
+        it("render url",async () => {
+            const resp = {
+                data: {html_url: "https://github.com/theMistletoe"}
+            };
+            axios.get.mockResolvedValueOnce(resp);
+            const { getAllByTestId, getByText } = render(<Main />);
+            await waitForElement(() => getAllByTestId("url"));
+
+            expect(getByText("https://github.com/theMistletoe")).toBeInTheDocument();
         });
     });
 });
