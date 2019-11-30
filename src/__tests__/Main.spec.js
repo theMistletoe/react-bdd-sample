@@ -21,6 +21,11 @@ describe("Main", () => {
 
     beforeEach(() => {
         window._virtualConsole.emit = jest.fn();
+
+        const resp = {
+            data: {login: 'theMistletoe', html_url: 'https://github.com/theMistletoe'}
+        };
+        axios.get.mockResolvedValue(resp);
     });
 
     afterAll(() => {
@@ -29,25 +34,27 @@ describe("Main", () => {
 
     describe("execute",  () => {
 
-        it("render user name",async () => {
-            const resp = {
-                data: {login: 'theMistletoe'}
-            };
-            axios.get.mockResolvedValueOnce(resp);
+        it("is able to input email", () => {
+            const { getByPlaceholderText } = render(<Main />);
+            expect(getByPlaceholderText("Input GitHub Name")).toBeInTheDocument();
+        });
+
+        it("displays login Button", () => {
+            const { getByText } = render(<Main />);
+            expect(getByText("Send")).toBeInTheDocument();
+        });
+
+        
+
+        it("render user name", async () => {
             const { getAllByTestId, getByText } = render(<Main />);
             expect(getByText("Main Page")).toBeInTheDocument();
             await waitForElement(() => getAllByTestId("name"));
 
-            expect(axios.get).toHaveBeenCalledTimes(1)
-
             expect(getByText("theMistletoe")).toBeInTheDocument();
         });
 
-        it("render url",async () => {
-            const resp = {
-                data: {html_url: "https://github.com/theMistletoe"}
-            };
-            axios.get.mockResolvedValueOnce(resp);
+        it("render url", async () => {
             const { getAllByTestId, getByText } = render(<Main />);
             await waitForElement(() => getAllByTestId("url"));
 
