@@ -10,4 +10,7 @@ yarn start
 
 # exec test
 yarn test
+
+# build App
+yarn build
 ```
