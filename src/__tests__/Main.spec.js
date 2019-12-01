@@ -32,6 +32,10 @@ describe("Main", () => {
         window._virtualConsole.emit = emit;
     });
 
+    afterEach(() => {
+        jest.clearAllMocks();
+    });
+
     describe("execute",  () => {
 
         it("is able to input email", () => {
@@ -44,20 +48,23 @@ describe("Main", () => {
             expect(getByText("Send")).toBeInTheDocument();
         });
 
-        
+        it("exec axios by inputed value", async () => {
+            const spy = jest.spyOn(axios, 'get').mockImplementation(() => {
+                return {
+                    data: {login: 'theMistletoe', html_url: 'https://github.com/theMistletoe'}
+                }
+            });
+            
+            const { getByText, getByPlaceholderText, getAllByTestId } = render(<Main />);
 
-        it("render user name", async () => {
-            const { getAllByTestId, getByText } = render(<Main />);
-            expect(getByText("Main Page")).toBeInTheDocument();
+            fireEvent.change(getByPlaceholderText("Input GitHub Name"), {target: {value: 'theMistletoe'}})
+            fireEvent.click(getByText("Send"))
+
             await waitForElement(() => getAllByTestId("name"));
-
-            expect(getByText("theMistletoe")).toBeInTheDocument();
-        });
-
-        it("render url", async () => {
-            const { getAllByTestId, getByText } = render(<Main />);
             await waitForElement(() => getAllByTestId("url"));
-
+            
+            expect(spy).toHaveBeenCalledWith("https://api.github.com/users/theMistletoe");
+            expect(getByText("theMistletoe")).toBeInTheDocument();
             expect(getByText("https://github.com/theMistletoe")).toBeInTheDocument();
         });
     });

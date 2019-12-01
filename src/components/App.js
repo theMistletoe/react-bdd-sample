@@ -13,7 +13,7 @@ export default class App extends React.Component {
         const rootElement = document.getElementById("root");
         ReactDOM.render(<Main />, rootElement);
     }
-//   state = { greeting: 'Hello' };
+
   render() {
     return (
       <div>
@@ -37,7 +37,6 @@ export default class App extends React.Component {
                 <button type="submit">Login</button>
             </div>
         </form>
-        {/* <div data-testid="greeting">{this.state.greeting}</div> */}
       </div>
     );
   }
