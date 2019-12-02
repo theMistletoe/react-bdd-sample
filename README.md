@@ -1,6 +1,13 @@
 # react-bdd-sample
 bdd sample for react using react-testing-library
 
+# Requirement
+
+```
+node v12.13.1
+yarn 1.19.2
+```
+
 # Usage
 
 ```
