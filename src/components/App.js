@@ -14,30 +14,30 @@ export default class App extends React.Component {
         ReactDOM.render(<Main />, rootElement);
     }
 
-  render() {
-    return (
-      <div>
-        <h1>Login Page</h1>
-        <form onSubmit={this.handleLogin}>
+    render() {
+        return (
             <div>
-                <label>
+                <h1>Login Page</h1>
+                <form onSubmit={this.handleLogin}>
+                    <div>
+                        <label>
                     email:
-                    <input type="text" placeholder="Input Your Email Address"></input>
-                </label>
-            </div>
+                            <input type="text" placeholder="Input Your Email Address"></input>
+                        </label>
+                    </div>
 
-            <div>
-                <label>
+                    <div>
+                        <label>
                     password:
-                    <input type="password" placeholder="Password"></input>
-                </label>
-            </div>
+                            <input type="password" placeholder="Password"></input>
+                        </label>
+                    </div>
 
-            <div>
-                <button type="submit">Login</button>
+                    <div>
+                        <button type="submit">Login</button>
+                    </div>
+                </form>
             </div>
-        </form>
-      </div>
-    );
-  }
+        );
+    }
 }

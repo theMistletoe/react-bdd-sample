@@ -16,40 +16,40 @@ export default class Main extends React.Component {
     }
 
     handleChange(e) {
-      this.setState({inputName: e.target.value});
+        this.setState({inputName: e.target.value}); // eslint-disable-line react/no-set-state
     }
 
     async fetchGitHubInfo(e) {
-      e.preventDefault();
+        e.preventDefault();
       
-      const response = await axios.get(`https://api.github.com/users/${this.state.inputName}`)
-      this.setState({user: response.data.login})
-      this.setState({url: response.data.html_url})
+        const response = await axios.get(`https://api.github.com/users/${this.state.inputName}`)
+        this.setState({user: response.data.login}) // eslint-disable-line react/no-set-state
+        this.setState({url: response.data.html_url}) // eslint-disable-line react/no-set-state
     }
 
-  render() {
-    return (
-      <div>
-        <h1>Main Page</h1>
-        <form onSubmit={this.fetchGitHubInfo}>
+    render() {
+        return (
             <div>
-                <label>
+                <h1>Main Page</h1>
+                <form onSubmit={this.fetchGitHubInfo}>
+                    <div>
+                        <label>
                     Name:
-                    <input type="text" placeholder="Input GitHub Name" value={this.state.inputName} onChange={this.handleChange}></input>
-                </label>
-            </div>
+                            <input type="text" placeholder="Input GitHub Name" value={this.state.inputName} onChange={this.handleChange}></input>
+                        </label>
+                    </div>
             
-            <div>
-              <button type="submit">
+                    <div>
+                        <button type="submit">
                 Send
-              </button>
+                        </button>
+                    </div>
+                </form>
+                <ul>
+                    <li data-testid="name">{this.state.user}</li>
+                    <li data-testid="url">{this.state.url}</li>
+                </ul>
             </div>
-        </form>
-        <ul>
-          <li data-testid="name">{this.state.user}</li>
-          <li data-testid="url">{this.state.url}</li>
-        </ul>
-      </div>
-    );
-  }
+        );
+    }
 }
