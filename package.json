@@ -37,7 +37,7 @@
     "react-scripts": "^3.2.0",
     "regenerator-runtime": "^0.13.3"
   },
-  "homepage": "https://themistletoe.github.io/react-bdd-sample/"
+  "homepage": "https://themistletoe.github.io/react-bdd-sample/",
   "browserslist": [
     ">0.2%",
     "not dead",
