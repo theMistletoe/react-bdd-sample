@@ -15,9 +15,17 @@ yarn 1.19.2
 yarn install
 yarn start
 
+# lint
+yarn lint
+yarn auto_fix
+
 # exec test
 yarn test
 
 # build App
 yarn build
 ```
+
+# Deployment
+
+https://themistletoe.github.io/react-bdd-sample/
