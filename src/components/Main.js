@@ -44,7 +44,7 @@ export default class Main extends React.Component {
                 Send
                         </button>
                         <button type="submit">
-                犬種
+                研修
                         </button>
                     </div>
                 </form>
