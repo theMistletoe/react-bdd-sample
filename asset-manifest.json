@@ -1,18 +1,18 @@
 {
   "files": {
-    "main.js": "/react-bdd-sample/static/js/main.0c7ccff9.chunk.js",
-    "main.js.map": "/react-bdd-sample/static/js/main.0c7ccff9.chunk.js.map",
+    "main.js": "/react-bdd-sample/static/js/main.d4593738.chunk.js",
+    "main.js.map": "/react-bdd-sample/static/js/main.d4593738.chunk.js.map",
     "runtime-main.js": "/react-bdd-sample/static/js/runtime-main.93386eb1.js",
     "runtime-main.js.map": "/react-bdd-sample/static/js/runtime-main.93386eb1.js.map",
     "static/js/2.50566d10.chunk.js": "/react-bdd-sample/static/js/2.50566d10.chunk.js",
     "static/js/2.50566d10.chunk.js.map": "/react-bdd-sample/static/js/2.50566d10.chunk.js.map",
     "index.html": "/react-bdd-sample/index.html",
-    "precache-manifest.a56c04a8644b4f623e68c7c7c81951ca.js": "/react-bdd-sample/precache-manifest.a56c04a8644b4f623e68c7c7c81951ca.js",
+    "precache-manifest.158a34d119e76e6b7e5669b9134614e0.js": "/react-bdd-sample/precache-manifest.158a34d119e76e6b7e5669b9134614e0.js",
     "service-worker.js": "/react-bdd-sample/service-worker.js"
   },
   "entrypoints": [
     "static/js/runtime-main.93386eb1.js",
     "static/js/2.50566d10.chunk.js",
-    "static/js/main.0c7ccff9.chunk.js"
+    "static/js/main.d4593738.chunk.js"
   ]
 }
