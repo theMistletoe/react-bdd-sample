@@ -46,6 +46,9 @@ export default class Main extends React.Component {
                         <button type="submit">
                 研修
                         </button>
+                        <button type="submit">
+                KADO
+                        </button>
                     </div>
                 </form>
                 <ul>

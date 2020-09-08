@@ -53,6 +53,11 @@ describe("Main", () => {
             expect(getByText("研修")).toBeInTheDocument();
         });
 
+        it("角ボタンが見える", () => {
+            const { getByText } = render(<Main />);
+            expect(getByText("角")).toBeInTheDocument();
+        });
+
         it("exec axios by inputed value", async () => {
             const spy = jest.spyOn(axios, 'get').mockImplementation(() => {
                 return {
