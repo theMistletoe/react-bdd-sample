@@ -47,7 +47,7 @@ export default class Main extends React.Component {
                 研修
                         </button>
                         <button type="submit">
-                KADO
+                角
                         </button>
                     </div>
                 </form>
