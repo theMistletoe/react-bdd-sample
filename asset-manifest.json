@@ -1,18 +1,18 @@
 {
   "files": {
-    "main.js": "/react-bdd-sample/static/js/main.e0f2b5fe.chunk.js",
-    "main.js.map": "/react-bdd-sample/static/js/main.e0f2b5fe.chunk.js.map",
+    "main.js": "/react-bdd-sample/static/js/main.d4593738.chunk.js",
+    "main.js.map": "/react-bdd-sample/static/js/main.d4593738.chunk.js.map",
     "runtime-main.js": "/react-bdd-sample/static/js/runtime-main.93386eb1.js",
     "runtime-main.js.map": "/react-bdd-sample/static/js/runtime-main.93386eb1.js.map",
-    "static/js/2.b687629f.chunk.js": "/react-bdd-sample/static/js/2.b687629f.chunk.js",
-    "static/js/2.b687629f.chunk.js.map": "/react-bdd-sample/static/js/2.b687629f.chunk.js.map",
+    "static/js/2.50566d10.chunk.js": "/react-bdd-sample/static/js/2.50566d10.chunk.js",
+    "static/js/2.50566d10.chunk.js.map": "/react-bdd-sample/static/js/2.50566d10.chunk.js.map",
     "index.html": "/react-bdd-sample/index.html",
-    "precache-manifest.9a0fb916530457903ccd065d7fe3d7b6.js": "/react-bdd-sample/precache-manifest.9a0fb916530457903ccd065d7fe3d7b6.js",
+    "precache-manifest.158a34d119e76e6b7e5669b9134614e0.js": "/react-bdd-sample/precache-manifest.158a34d119e76e6b7e5669b9134614e0.js",
     "service-worker.js": "/react-bdd-sample/service-worker.js"
   },
   "entrypoints": [
     "static/js/runtime-main.93386eb1.js",
-    "static/js/2.b687629f.chunk.js",
-    "static/js/main.e0f2b5fe.chunk.js"
+    "static/js/2.50566d10.chunk.js",
+    "static/js/main.d4593738.chunk.js"
   ]
 }
